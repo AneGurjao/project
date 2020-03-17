@@ -1,14 +1,16 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import { Banner, Dreamshare, Partners, Vacation, Footer } from './components';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-        <Typography>
-          Hello word
-        </Typography>
-    </div>
-  );
-}
+    <>
+      <Banner />
+      <Dreamshare />
+      <Partners />
+      <Vacation />
+      <Footer />
+    </>
+  )
+;}
 
 export default App;
