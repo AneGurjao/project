@@ -1,5 +1,5 @@
 import  React from 'react';
-import { ContainerCustom } from './styled';
+import {ContainerCustom} from './styled';
 import { Title } from './styled';
 import { ButtonFull } from './styled';
 import { Text } from './styled';

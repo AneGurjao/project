@@ -1,5 +1,5 @@
 import  React from 'react';
-import { ContainerCustom } from './styled';
+import {ContainerCustom} from './styled';
 import { Title } from './styled';
 import { SmallAvatar } from './styled';
 import { BadgeCustom } from './styled';
@@ -22,7 +22,7 @@ const Partners = () => {
 		<ContainerCustom>
       <Title>Meet a partners for your best</Title>
       <Grid container direction="row" justify="space-evenly" alignItems="center" spacing={1}>
-        <Grid item xs={3} style={{textAlign: 'center'}}>
+        <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center'}}>
           <BadgeCustom
             overlap="circle"
             anchorOrigin={{
@@ -36,7 +36,7 @@ const Partners = () => {
           <TitleSmall>Bradley Hunter</TitleSmall>
           <Description>Based in Chicago. I love playing tennis and loud music.</Description>
         </Grid>
-        <Grid item xs={3} style={{textAlign: 'center'}}>
+        <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center'}}>
           <BadgeCustom
             overlap="circle"
             anchorOrigin={{
@@ -50,7 +50,7 @@ const Partners = () => {
           <TitleSmall>Marie Bennett</TitleSmall>
           <Description>Currently living in Colorado. Lover of art, languages and travelling.</Description>
         </Grid>
-        <Grid item xs={3} style={{textAlign: 'center'}}>
+        <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center'}}>
           <BadgeCustom
             overlap="circle"
             anchorOrigin={{
@@ -64,7 +64,7 @@ const Partners = () => {
           <TitleSmall>Diana Wells</TitleSmall>
           <Description>Living in Athens, Greece. I love black and white classics, chillout music and green tea.</Description>
         </Grid>
-        <Grid item xs={3} style={{textAlign: 'center'}}>
+        <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center'}}>
           <BadgeCustom
             overlap="circle"
             anchorOrigin={{
