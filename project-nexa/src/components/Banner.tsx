@@ -1,30 +1,24 @@
 import  React from 'react';
-import Container from '@material-ui/core/Container';
+import {ContainerCustom} from './styled';
 import { Header } from './styled';
-import { Navbar } from './styled';
-import { Title } from './styled';
+import { BannerTitle } from './styled';
 import { SubTitle } from './styled';
-import Grid from '@material-ui/core/Grid';
-import { Button, CardContent } from '@material-ui/core';
+import { ContentCard } from './styled';
+import { ButtonFull } from './styled';
+import { CompanyName } from './styled';
 
 const Banner = () => {
 	return (
 		<Header>
 			<div className="lightness">
-				<Container>
-					<Navbar>
-						<Grid>DREAMSHARE</Grid>
-						<Grid>
-							<Button>Log in</Button>
-							<Button>Sign up</Button>
-						</Grid>
-					</Navbar>
-					<CardContent>
-						<Title>share your holiday dream</Title>
+				<ContainerCustom className="body">
+					<ContentCard>
+						<CompanyName className="mobile">DREAMSHARE</CompanyName>	
+						<BannerTitle>share your holiday dream</BannerTitle>
 						<SubTitle>And find the perfect partner to fullfill it</SubTitle>
-						<Button variant="contained" color="secondary">Find your holiday partner</Button>
-					</CardContent>
-				</Container>
+						<ButtonFull>Find your holiday partner</ButtonFull>
+					</ContentCard>
+				</ContainerCustom>
 			</div>
 		</Header>
 	)

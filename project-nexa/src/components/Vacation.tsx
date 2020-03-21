@@ -1,19 +1,28 @@
 import  React from 'react';
-import FormControl from '@material-ui/core/FormControl';
-import FilledInput from '@material-ui/core/FilledInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import { Button } from '@material-ui/core';
+import {ContainerCustom} from './styled';
+import { Title } from './styled';
+import { ButtonFull } from './styled';
+import { Text } from './styled';
+import { TextFieldCustom } from './styled';
+import { Grid } from '@material-ui/core';
 
 const Vacation = () => {
 	return (
-		<div>
-			<h1>Create your holiday</h1>
-			<FormControl variant="filled">
-				<InputLabel htmlFor="component-filled">Name</InputLabel>
-				<FilledInput id="component-filled" />
-			</FormControl>
-			<Button variant="contained" color="secondary">Search partners</Button>
-		</div>
+		<>
+			<ContainerCustom>
+				<Title>Create your holiday</Title>
+				<Text>Hi! What are your holiday interests?</Text>
+				<Grid container justify="center">
+					<TextFieldCustom
+						label="Enter your interests"
+						id="outlined-size-small"
+						variant="outlined"
+						size="small"
+					/>
+					<ButtonFull>Search partners</ButtonFull>
+				</Grid>
+			</ContainerCustom>
+		</>
 	)
 }
 

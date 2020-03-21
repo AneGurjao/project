@@ -1,9 +1,10 @@
 import React from 'react';
-import { Banner, Dreamshare, Partners, Vacation, Footer } from './components';
+import { Menu ,Banner, Dreamshare, Partners, Vacation, Footer } from './components';
 
 const App = () => {
   return (
     <>
+      <Menu />
       <Banner />
       <Dreamshare />
       <Partners />
