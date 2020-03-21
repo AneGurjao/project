@@ -3,7 +3,8 @@ import {ContainerCustom} from './styled';
 import { Title } from './styled';
 import { ButtonFull } from './styled';
 import { Text } from './styled';
-import { Grid, TextField } from '@material-ui/core';
+import { TextFieldCustom } from './styled';
+import { Grid } from '@material-ui/core';
 
 const Vacation = () => {
 	return (
@@ -12,7 +13,7 @@ const Vacation = () => {
 				<Title>Create your holiday</Title>
 				<Text>Hi! What are your holiday interests?</Text>
 				<Grid container justify="center">
-					<TextField
+					<TextFieldCustom
 						label="Enter your interests"
 						id="outlined-size-small"
 						variant="outlined"

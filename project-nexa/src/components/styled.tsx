@@ -2,13 +2,46 @@ import styled from "styled-components";
 import banner from '../common/img/migos.jpg';
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
-import { FormControl, Avatar, Badge, Typography, Card } from "@material-ui/core";
+import { FormControl, Avatar, Badge, Typography, Card, TextField } from "@material-ui/core";
+
+export const ContainerCustom = styled(Container)`
+	&& {
+		padding: 4.1rem 5.5rem;
+
+		&.body {
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
+		@media (min-width: 320px) and (max-width: 768px) {
+			padding: 3.1rem 0.5rem;
+		}
+
+		@media (max-width: 425px) {
+			& .desktop {
+				display: none;
+			}
+
+			& .mobile {
+				display: block;
+			}
+		}
+
+		@media (min-width: 767px) {
+
+			& .mobile {
+				display: none;
+			}
+		}
+	}
+`;
 
 export const Header = styled.header`
 	background-image: url(${banner});
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
+	position: relative;
 
 	& .lightness {
 		background-color: rgba(102, 102, 102, 0.58);
@@ -16,59 +49,86 @@ export const Header = styled.header`
 	}
 `;
 
-export const ContainerCustom = styled(Container)`
-	&& {
-		padding: 3.1rem 5.5rem;
-
-		@media (min-width: 320px) and (max-width: 768px) {
-			padding: 3.1rem 0.5rem;
-		}
-	}
-`;
-
 export const Navbar = styled.nav`
+	position: absolute;
+    z-index: 999;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
 
 	& .link {
 		color: white;
 		font-weight: 100;
 		padding-left: 13px;
+		text-decoration: none;
 		
-		&:hover {
+		&.active {
 			text-decoration: none;
-			border: 1px solid #fff;
-			border-radius: 15px;
-			padding: 7px 13px;
+			border: 2px solid #fff;
+			border-radius: 18px;
+			padding: 8px 15px;
+			margin-left: 20px;
 		}
 	}
+`;
+
+export const ContentCard = styled.div`
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 `;
 
 export const CompanyName = styled.div`
 	color: white;
 	font-weight: 600;
 	letter-spacing: 0.5px;
+
+	@media(max-width: 425px) {
+		&.mobile {
+			display: block;
+			margin-bottom: 30px;
+		}
+
+		&.desktop {
+			display: none;
+		}
+	}
 `;
 
-export const ContentCard = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-`;
 
 export const BannerTitle = styled.h1`
 	color: white;
 	text-transform: uppercase;
-	font-size: 3em;
+	font-size: 3.5em;
 	text-align: center;
 	font-weight: 600;
+	width: 50%;
+    margin: 0 auto;
+
+	@media (max-width: 768px) {
+		font-size: 2.2em;
+		width: 80%;
+	}
 `;
 
-export const SubTitle = styled(BannerTitle)`
-	text-transform: initial;
-	font-size: 14px;
-	font-weight: inherit;
+export const SubTitle = styled.p`
+	&& {
+		text-transform: initial;
+		font-size: 1.5rem;
+		font-weight: 100;
+		color: white;
+		margin: 25px 0;
+		font-family: 'Open Sans Condensed', sans-serif;
+    	letter-spacing: 0.8px;
+
+		@media (max-width: 425px) {
+			font-size: 1rem;
+		}
+
+	}
 `;
 
 export const ButtonFull = styled(Button)`
@@ -81,6 +141,10 @@ export const ButtonFull = styled(Button)`
 
 	&:hover {
 	background: #FF4E50;
+	}
+
+	@media(max-width: 767px) {
+		margin-top: 20px;
 	}
 }
 `;
@@ -164,6 +228,7 @@ export const Title = styled.h1`
 export const Text = styled.p`
 	color: #444444;
 	text-align: center;
+	margin-bottom: 25px;
 `;
 
 export const FormControlCustom = styled(FormControl)`
@@ -264,6 +329,18 @@ export const Description = styled(Typography)`
 	}
 `;
 
+export const TextFieldCustom = styled(TextField)`
+	& .MuiOutlinedInput-root {
+		margin-right: 20px;
+	}
+
+	& .MuiOutlinedInput-input {
+		width: 250px;
+    	padding: 0 20px;
+		height: 44px;
+	}
+`;
+
 export const Foot = styled.div`
 	border-top: 2px solid #FF4E50;
 
@@ -292,9 +369,15 @@ export const Foot = styled.div`
 	}
 `;
 
-export const TypographyCustom = styled(BannerTitle)`
+export const TypographyCustom = styled.div`
+	font-weight: 600;
+	letter-spacing: 0.5px;	
 	color: #FF4E50;
 	font-size: 1em;
 	font-weight: 300;
 	margin-top: 0;
+
+	@media (max-width: 767px) {
+		margin-bottom: 20px;
+	}
 `;

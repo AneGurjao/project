@@ -30,7 +30,7 @@ const Footer = () => {
 						</ul>
 					</Grid>
 					<Grid item xs={12} sm={3} md={1}>
-						<img src={ImgFooter} />
+						<img src={ImgFooter} alt='imagem informa o responsável pelo design'/>
 					</Grid>
 				</Grid>
 			</ContainerCustom>
