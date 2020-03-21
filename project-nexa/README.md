@@ -1,21 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-
-
-
-
 # Project Nexa
 
 This Readme outlines the details on how to run this SPA React TypeScript App.
@@ -31,7 +13,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-- `git clone ` this repository and change into the new directory
+- `git clone https://github.com/Rosiane-Gurjao/teste-nexa.git` this repository and change into the new directory
 - `yarn install` installs dependendencies
 
 ## Running
